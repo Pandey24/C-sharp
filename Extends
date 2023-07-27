@@ -1,0 +1,24 @@
+//Extends: How to extend features in an existing class without breaking any change in an existing class
+using System;
+
+namespace HelloWorld
+{
+public  static class StringHelper
+{
+public static string ToTitleCase(this string Name)
+{
+return System.Globalization.CultureInfo.CurrentCulture.TextInfo.ToTitleCase(Name);
+}
+}
+
+  class Program
+  {
+    static void Main(string[] args)
+    {
+    var str="suraj pandey";
+      Console.WriteLine(str.ToTitleCase());    
+    }
+  }
+}
+//Output
+//Suraj Pandey
